@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.page-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+
+/* Add a glowing planet for a 3D effect */
+.planet {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 153, 255, 0.9) 10%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgba(0, 153, 255, 0.8);
+    animation: floatPlanet 6s ease-in-out infinite alternate;
+}
+
+/* Floating animation for the planet */
+@keyframes floatPlanet {
+    0% { transform: translateY(0px) scale(1); }
+    100% { transform: translateY(-30px) scale(1.1); }
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 80%;
+}
+
+.content-box {
+    width: 45%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #ddd;
+}
+
+/* Clickable Research Paper Link */
+/* Common styles for both links */
+.research-link, .github-link {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.research-link:hover, .github-link:hover {
+    color: #66ccff;
+    text-shadow: 0 0 10px rgba(102, 204, 255, 0.8);
+}
+
+
+/* Clickable Image Link */
+.image-link {
+    color: #00ff99; /* Neon green for uniqueness */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.image-link:hover {
+    color: #66ffcc;
+    text-shadow: 0 0 10px rgba(102, 255, 204, 0.8);
+}

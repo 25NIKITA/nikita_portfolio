@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* LANDING PAGE CONTAINER */
+.landing-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #000011, #220033); /* Deep Space Gradient */
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* PARTICLES BACKGROUND */
+.particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+/* CONTENT ALIGNMENT */
+.content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2; /* Ensure text is above particles */
+}
+
+/* PROFILE PICTURE */
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+/* NAME */
+.name {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+    animation: glow 2s infinite alternate;
+}
+/* Small Description */
+.description {
+    font-size: 1.2rem;
+    margin-top: 12px;
+    max-width: 600px;  /* Adjust width for readability */
+    color: #ddddff;  /* Soft glowing white */
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .description {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+}
+
+
+@keyframes glow {
+    0% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.6); }
+    100% { text-shadow: 0 0 40px rgba(255, 255, 255, 1); }
+}
+
+/* TITLE */
+.title {
+    font-size: 1.5rem;
+    margin-top: 8px;
+    color: #ccccff; /* Light Blue Glow */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+/* NAVIGATION TABS */
+.tabs-container {
+    display: flex;
+    gap: 35px;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.tab {
+    padding: 14px 28px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.tab:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+    .name {
+        font-size: 3rem;
+    }
+    .title {
+        font-size: 1.2rem;
+    }
+    .tab {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .name {
+        font-size: 5rem;
+    }
+    .title {
+        font-size: 1.8rem;
+    }
+    .tab {
+        font-size: 1.4rem;
+    }
+}

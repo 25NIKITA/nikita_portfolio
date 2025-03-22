@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.page-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+/* Center the experience cards */
+.experience-container {
+    display: flex;
+    justify-content: center;  /* Horizontally center */
+    align-items: center;      /* Vertically center */
+    gap: 40px;                /* Space between cards */
+    width: 90%;
+    max-width: 1100px;
+}
+
+/* Experience Cards */
+.experience-item {
+    flex: 1; /* Equal width for both cards */
+    max-width: 450px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    font-size: 1.1rem;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.experience-item:hover {
+    transform: scale(1.05);
+}
+
+/* Styling the Headings */
+.company {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+
+.role {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Styling Links */
+.experience-item a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.experience-item a:hover {
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .experience-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-item {
+        width: 80%; /* Full width on smaller screens */
+    }
+}

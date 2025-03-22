@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.skills-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Title */
+.section-title {
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+}
+
+/* Grid Wrapper (Side-by-Side Layout) */
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 50px;
+    width: 80%;
+    max-width: 1400px;
+    align-items: start;
+}
+
+/* Skills and Certifications Box */
+.skills-box {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.skills-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+}
+
+/* Headers */
+.skills-box h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* List */
+.skills-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* List Items */
+.skills-box li {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .skills-wrapper {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+        gap: 30px;
+    }
+
+    .skills-box {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-box {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,61 @@
+/* Full-screen layout */
+.contact-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Particle Background should cover entire screen */
+.particle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Contact card styling */
+.contact-content {
+  position: relative;
+  z-index: 10; /* Ensures it appears above particles */
+  background: rgba(30, 30, 30, 0.85); /* Semi-transparent dark background */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+  max-width: 500px;
+  width: 80%;
+}
+
+/* Title styling */
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Contact details */
+.contact-details {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Link styles */
+.contact-details a {
+  color: #4fa3ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-details a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
